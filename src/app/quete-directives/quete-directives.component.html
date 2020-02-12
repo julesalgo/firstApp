@@ -1,0 +1,24 @@
+<ul>
+  <li>Pommes de terre</li>
+  <li [ngStyle]="{ backgroundColor: isThisIngredientVital ? 'red' : 'yellow' }">
+    Raclette
+  </li>
+  <li>Jambon</li>
+  <li [ngClass]="{ vital: isThisIngredientVital }">Cornichons</li>
+  <li>Chou-fleur</li>
+</ul>
+<hr />
+<ul *appDisplayGuests="displayGuestList">
+  <li>Brenda</li>
+  <li>Dylan</li>
+  <li>Jean-Mi</li>
+  <li>Kylie</li>
+</ul>
+
+<button (click)="getGuestList()">Guest List</button>
+<hr />
+<ul *ngFor="let song of songList">
+  <li>{{ song }}</li>
+</ul>
+<hr />
+<h1 appHighlight>Raclette</h1>
