@@ -1,16 +1,18 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-
 import { AppRoutingModule } from "./app-routing.module";
+
 import { AppComponent } from "./app.component";
 import { SignUpComponent } from "./sign-up/sign-up.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
 import { QueteDirectivesComponent } from "./quete-directives/quete-directives.component";
 import { HighlightDirective } from "./highlight.directive";
-import { DisplayGuestsDirective } from './display-guests.directive';
-import { MoviesComponent } from './movies/movies.component';
-import { HoverDirective } from './hover.directive';
+import { DisplayGuestsDirective } from "./display-guests.directive";
+import { MoviesComponent } from "./movies/movies.component";
+import { HoverDirective } from "./hover.directive";
+import { ContactComponent } from "./contact/contact.component";
+import { MenuComponent } from "./menu/menu.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HoverDirective } from './hover.directive';
     HighlightDirective,
     DisplayGuestsDirective,
     MoviesComponent,
-    HoverDirective
+    HoverDirective,
+    ContactComponent,
+    MenuComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
