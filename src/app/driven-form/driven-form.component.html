@@ -1,0 +1,71 @@
+<div class="justify-content-center row">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
+      <div>
+        Form submitted : {{ myForm.submitted }} | Form valid :
+        {{ myForm.valid }} | Form invalid : {{ myForm.valid }}
+      </div>
+      <hr />
+      <div class="form-group">
+        <label for="title-order">Title</label>
+        <input
+          name="title-order"
+          type="text"
+          class="form-control"
+          [(ngModel)]="model.title"
+          #title="ngModel"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="quantity-order">Quantité</label>
+        <input
+          name="quantity-order"
+          type="number"
+          class="form-control"
+          [(ngModel)]="model.quantity"
+          #quantity="ngModel"
+          required
+          max="5"
+        />
+      </div>
+      <div class="form-group">
+        <label for="date-order">Date de commande</label>
+        <input
+          name="date-order"
+          type="date"
+          class="form-control"
+          [(ngModel)]="model.date"
+          #date="ngModel"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="contact-order">Contact</label>
+        <input
+          name="contact-order"
+          type="text"
+          class="form-control"
+          [(ngModel)]="model.contact"
+          #contact="ngModel"
+          required
+          email
+        />
+      </div>
+      <button class="btn btn-primary" type="reset">Restaurer</button>
+      <button class="btn btn-primary" type="submit">Sauvegarder</button>
+      <div *ngIf="quantity.errors">
+        <span *ngIf="quantity.errors.required"
+          >Le champs quantité est requis</span
+        >
+        <span *ngIf="quantity.errors.max"
+          >La quantité maximal doit être inférieur à 5</span
+        >
+      </div>
+      <div *ngIf="title.errors">
+        <span *ngIf="title.errors.required">Le champs title est requis</span>
+        <span *ngIf="title.errors.max">Le titre est pas là lol</span>
+      </div>
+    </form>
+  </div>
+</div>

@@ -6,6 +6,10 @@ import { UserProfileComponent } from "./user-profile/user-profile.component";
 import { QueteDirectivesComponent } from "./quete-directives/quete-directives.component";
 import { MoviesComponent } from "./movies/movies.component";
 import { AppComponent } from "./app.component";
+import { CreateKittenComponent } from "./create-kitten/create-kitten.component";
+import { ListKittenComponent } from "./list-kitten/list-kitten.component";
+import { UserKittenComponent } from "./user-kitten/user-kitten.component";
+import { DrivenFormComponent } from "./driven-form/driven-form.component";
 
 const routes: Routes = [
   { path: "./", component: AppComponent },
@@ -13,7 +17,11 @@ const routes: Routes = [
   { path: "signup", component: SignUpComponent },
   { path: "user", component: UserProfileComponent },
   { path: "quetedirectives", component: QueteDirectivesComponent },
-  { path: "movies", component: MoviesComponent }
+  { path: "movies", component: MoviesComponent },
+  { path: "createkitten", component: CreateKittenComponent },
+  { path: "listkitten", component: ListKittenComponent },
+  { path: "userkitten", component: UserKittenComponent },
+  { path: "drivenform", component: DrivenFormComponent }
 ];
 
 @NgModule({

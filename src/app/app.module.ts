@@ -13,6 +13,10 @@ import { MoviesComponent } from "./movies/movies.component";
 import { HoverDirective } from "./hover.directive";
 import { ContactComponent } from "./contact/contact.component";
 import { MenuComponent } from "./menu/menu.component";
+import { CreateKittenComponent } from "./create-kitten/create-kitten.component";
+import { ListKittenComponent } from "./list-kitten/list-kitten.component";
+import { UserKittenComponent } from "./user-kitten/user-kitten.component";
+import { DrivenFormComponent } from "./driven-form/driven-form.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { MenuComponent } from "./menu/menu.component";
     MoviesComponent,
     HoverDirective,
     ContactComponent,
-    MenuComponent
+    MenuComponent,
+    CreateKittenComponent,
+    ListKittenComponent,
+    UserKittenComponent,
+    DrivenFormComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

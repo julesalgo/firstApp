@@ -1,2 +1,69 @@
-<h1>Email Renseigné Dans Input</h1>
-<input type="email" name="email" />
+<div class="justify-content-center row">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
+      <div class="form-group">
+        <label for="user-coucou">User</label>
+        <input
+          name="user-coucou"
+          minlength="4"
+          maxlength="25"
+          type="text"
+          [(ngModel)]="model.user"
+          class="form-control"
+          #user="ngModel"
+          required
+        />
+
+        <div
+          *ngIf="myForm.submitted && myForm.invalid"
+          class="alert alert-danger"
+        >
+          Le champ est requis
+        </div>
+        <div
+          *ngIf="user.invalid && (user.dirty || user.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="user.errors.required">
+            Le champ est requis.
+          </div>
+          <div *ngIf="user.errors.minlength">
+            Le champ user ne doit pas dépasser 4 caractères.
+          </div>
+          <div *ngIf="user.errors.maxlength">
+            Le champ user ne doit pas dépasser 25 caractères.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email-coucou">Email</label>
+        <input
+          name="email-coucou"
+          type="email"
+          [(ngModel)]="model.email"
+          class="form-control"
+          #email="ngModel"
+          required
+        />
+        <div
+          *ngIf="myForm.submitted && myForm.invalid"
+          class="alert alert-danger"
+        >
+          Le champ est requis
+        </div>
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="email.errors.required">
+            Le champ est requis.
+          </div>
+          <div *ngIf="email.errors">
+            Le champ email est invalide
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Sauvegarder</button>
+    </form>
+  </div>
+</div>
