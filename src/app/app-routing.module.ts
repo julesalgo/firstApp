@@ -10,6 +10,9 @@ import { CreateKittenComponent } from "./create-kitten/create-kitten.component";
 import { ListKittenComponent } from "./list-kitten/list-kitten.component";
 import { UserKittenComponent } from "./user-kitten/user-kitten.component";
 import { DrivenFormComponent } from "./driven-form/driven-form.component";
+import { KitchenComponent } from "./kitchen/kitchen.component";
+import { MagicOvenComponent } from "./magic-oven/magic-oven.component";
+import { DeveloperComponent } from "./developer/developer.component";
 
 const routes: Routes = [
   { path: "./", component: AppComponent },
@@ -21,7 +24,10 @@ const routes: Routes = [
   { path: "createkitten", component: CreateKittenComponent },
   { path: "listkitten", component: ListKittenComponent },
   { path: "userkitten", component: UserKittenComponent },
-  { path: "drivenform", component: DrivenFormComponent }
+  { path: "drivenform", component: DrivenFormComponent },
+  { path: "kitchen", component: KitchenComponent },
+  { path: "magicoven", component: MagicOvenComponent },
+  { path: "developercomponent", component: DeveloperComponent }
 ];
 
 @NgModule({

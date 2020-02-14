@@ -1,0 +1,70 @@
+<div class="justify-content-center row">
+  <div class="col-sm-7 col-sm-offset-3 text-center">
+    <form (submit)="startCooking()">
+      <h4>My Kitchen</h4>
+      <div class="from-group">
+        <label for="flour">Flour quantity :</label>
+        <input
+          class="form-control"
+          type="number"
+          name="flour"
+          [(ngModel)]="flourQuantity"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="salt">Salt quantity :</label>
+        <input
+          class="form-control"
+          type="number"
+          name="salt"
+          [(ngModel)]="saltQuantity"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="sugar">Sugar quantity :</label>
+        <input
+          class="form-control"
+          type="number"
+          name="sugar"
+          [(ngModel)]="sugarQuantity"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="egg">Egg quantity :</label>
+        <input
+          class="form-control"
+          type="number"
+          name="egg"
+          [(ngModel)]="eggQuantity"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="number">Number of cookies :</label>
+        <input
+          class="form-control"
+          type="number"
+          name="number"
+          [(ngModel)]="numberOfCookies"
+        />
+      </div>
+
+      <div>
+        <button type="submit">Cook !</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-magic-oven
+  [startCooking]="cook"
+  [numberOfCookies]="numberOfCookies"
+  [flour]="flourQuantity"
+  [salt]="saltQuantity"
+  [sugar]="sugarQuantity"
+  [egg]="eggQuantity"
+>
+</app-magic-oven>
