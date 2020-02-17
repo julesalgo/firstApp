@@ -13,6 +13,7 @@ import { DrivenFormComponent } from "./driven-form/driven-form.component";
 import { KitchenComponent } from "./kitchen/kitchen.component";
 import { MagicOvenComponent } from "./magic-oven/magic-oven.component";
 import { DeveloperComponent } from "./developer/developer.component";
+import { CocktailListComponent } from "./cocktail-list/cocktail-list.component";
 
 const routes: Routes = [
   { path: "./", component: AppComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: "drivenform", component: DrivenFormComponent },
   { path: "kitchen", component: KitchenComponent },
   { path: "magicoven", component: MagicOvenComponent },
-  { path: "developercomponent", component: DeveloperComponent }
+  { path: "developercomponent", component: DeveloperComponent },
+  { path: "cocktail", component: CocktailListComponent }
 ];
 
 @NgModule({

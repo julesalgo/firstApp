@@ -24,7 +24,14 @@ export class MagicOvenComponent implements OnInit {
   @Input()
   startCooking: boolean;
 
+  @Output()
+  getCookies: EventEmitter<any> = new EventEmitter();
+
   constructor() {}
 
   ngOnInit() {}
+
+  sendCookies() {
+    this.getCookies.emit(this.numberOfCookies);
+  }
 }

@@ -20,8 +20,10 @@ import { UserKittenComponent } from "./user-kitten/user-kitten.component";
 import { DrivenFormComponent } from "./driven-form/driven-form.component";
 import { KitchenComponent } from "./kitchen/kitchen.component";
 import { MagicOvenComponent } from "./magic-oven/magic-oven.component";
-import { DeveloperComponent } from './developer/developer.component';
-import { SkillComponent } from './skill/skill.component';
+import { DeveloperComponent } from "./developer/developer.component";
+import { SkillComponent } from "./skill/skill.component";
+import { CocktailService } from "./cocktail.service";
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +44,11 @@ import { SkillComponent } from './skill/skill.component';
     KitchenComponent,
     MagicOvenComponent,
     DeveloperComponent,
-    SkillComponent
+    SkillComponent,
+    CocktailListComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  providers: [CocktailService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

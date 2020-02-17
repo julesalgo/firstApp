@@ -66,5 +66,9 @@
   [salt]="saltQuantity"
   [sugar]="sugarQuantity"
   [egg]="eggQuantity"
->
-</app-magic-oven>
+  (getCookies)="onGetCookies($event)"
+></app-magic-oven>
+
+<div class="container">
+  There are <b>{{ cookiesCooked }}</b> cookies cooked !
+</div>
